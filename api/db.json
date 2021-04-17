@@ -1,0 +1,41 @@
+{
+  "streams": [
+    {
+      "description": "how about now",
+      "title": "test",
+      "id": 1
+    },
+    {
+      "description": "how about now again",
+      "title": "test2",
+      "id": 2
+    },
+    {
+      "description": "how about now again",
+      "title": "test2",
+      "id": 3
+    },
+    {
+      "title": "helllo",
+      "description": "part3",
+      "id": 4
+    },
+    {
+      "title": "helllo",
+      "description": "part3",
+      "id": 5
+    },
+    {
+      "title": "new stream",
+      "description": "with id",
+      "userId": "118250587399282627877",
+      "id": 6
+    },
+    {
+      "title": "testing",
+      "description": "testing the custom router and history object",
+      "userId": "118250587399282627877",
+      "id": 7
+    }
+  ]
+}
