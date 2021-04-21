@@ -3,6 +3,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import history from '../history'
 
+// REMOVE ANYTHING HARDCODED SO THAT THIS MODAL CAN BE USED AS A CUSTOM MODAL
+
 const Modal = props => {
     // to create a portal
     // takes two arguments. the first being the jsx, second argument is the reference to the element(div) that you want to render the portal into
