@@ -73,12 +73,16 @@ export const fetchStream = (id) =>async dispatch =>{
 // formvalues will contain the update to the stream
 export const editStream = (id,formvalues) => async dispatch => {
     // formvalues will communicate the update
-    const response = await streams.put(`/streams/${id}`,formvalues)
+    // use patch instead of push because patch replaces/overrides all properties of on the backend api while patch replaces the properties that you indicate specifically
+    const response = await streams.patch(`/streams/${id}`,formvalues)
     
     dispatch({
         type:EDIT_STREAM,
         payload: response.data
     })
+     //after a stream is created,if the api returns a success, do some programmatic navigation to get the user back to the root route
+// to programmatically navigate the user around utilize history.push('/') which will update the route/path and the url address. Push is essentially how you manually navigate a user around.
+ history.push('/')
 }
 
 export const deleteStreams = (id) => async dispatch =>{

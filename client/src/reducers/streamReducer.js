@@ -26,7 +26,6 @@ import {
                 ...state, [action.payload.id]:action.payload
             }
         case CREATE_STREAM:
-            
             return{ ...state,[action.payload.id]:action.payload}
         case EDIT_STREAM:
             return{...state,[action.payload.id]:action.payload}

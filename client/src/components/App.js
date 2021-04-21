@@ -21,9 +21,10 @@ const App = () => {
                     <Switch>
                         <Route path='/' exact component={StreamList}/>
                         <Route path='/streams/new' component={StreamCreate}/>
-                        <Route path='/streams/edit' component={StreamEdit}/>
-                        <Route path='/streams/delete' component={StreamDelete}/>
-                        <Route path='/streams/show' component={StreamShow}/>
+                        {/*the colon is the aspect that makes it so that id is a variable to allow for any id */}
+                        <Route path='/streams/edit/:id' component={StreamEdit}/>
+                        <Route path='/streams/delete/' component={StreamDelete}/>
+                        <Route path='/streams/show/:id' component={StreamShow}/>
                     </Switch>
                 </div>
             </Router>
