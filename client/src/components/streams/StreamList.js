@@ -19,7 +19,7 @@ const StreamList = ({fetchStreams,streams,currentUserId,isSignedIn}) => {
                {/* <button className="ui button primary">Edit</button> */}
                {/* path reflects the current stream clicked on. route is adusted app component with id variable to allow for any clicked on stream.id  */}
                <Link to={`/streams/edit/${stream.id}`} className='ui button primary'>Edit</Link>
-               <button className="ui button negative">Delete</button>
+               <Link to={`/streams/delete/${stream.id}`} className="ui button negative">Delete</Link>
            </div>
             )
         }

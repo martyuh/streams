@@ -13,15 +13,16 @@ const Modal = props => {
     //  background aspect of the modal
     // clicking on the background or container div of the modal will close the modal by programmatically directing the user to the main page. you do this by utilizing the onClick eventlistener and then using history.push
     // event propagation or event bubbling will result in unexpected behavior. when you click on a child element and it has a parent with a onClick listener, it will bubble up to the parent element and trigger it. to prevent that you provide a click event to the child element to instruct it to stopPropagation
-    <div onClick={()=>history.push('/')}className='ui dimmer modals visible active'>
+    // to customize onClick pass in the onclick function from the parent component. That function will allow it to be customized to be directed to any desired page or outcome
+    <div onClick={props.onDismiss} className='ui dimmer modals visible active'>
     {/* modal itself */}
     {/* click event stops the  event propagation of clicking on the child and causing it to bubble to the parent */}
+    {/* use props  passed to modal component to customize it, the props.action are buttons passed in from parent component */}
     <div onClick={(e)=>e.stopPropagation()}className="ui standard modal visible active">
-            <div className="header">Delete Stream</div>
-            <div className="content">Are you sure you want to delete this stream?</div>
+            <div className="header">{props.title}</div>
+            <div className="content">{props.content}</div>
             <div className="actions">
-                <button className="ui primary button">Delete</button>
-                <button className="ui button">Cancel</button>
+            {props.actions}
             </div>
         </div>
     </div>,

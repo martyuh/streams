@@ -92,5 +92,7 @@ export const deleteStreams = (id) => async dispatch =>{
         type:DELETE_STREAM,
         payload: id
     })
+    // after a stream is deleted and it is dispatched to thunk, thunk will then dispatch the action and programmatically redirect the user to the root page
+    history.push('/')
 }
 

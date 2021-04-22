@@ -41,9 +41,10 @@ const StreamEdit = (props) => {
         </div>
     )
 }
-//  ownProps provides access to props
+//  ownProps provides access to history in props
 const mapStateToProps = (state,ownProps) =>{
     return{
+        // selects the specific stream out of the object with all the streams by grabbing it via the id
         stream: state.streams[ownProps.match.params.id]
     }
 }
