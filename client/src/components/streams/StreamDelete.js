@@ -42,6 +42,7 @@ const StreamDelete = (props) => {
             content={renderContent()}
             // make sure to call it we are not passing a reference, we're calling it and passing it to the prop
             actions={renderActions()}
+            // called by modal component when user clicks off of modal
             onDismiss={() => history.push('/')}
             />
         

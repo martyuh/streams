@@ -10,6 +10,8 @@ import {
 // the state will contain an object with the ids passed in for the keys.
 
 // default empty object so that any thing can be added to the object, be it a single stream or a collection of streams
+
+
  const streamReducer = (state={},action) =>{
     switch(action.type){
         case FETCH_STREAMS:

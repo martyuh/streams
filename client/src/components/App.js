@@ -18,13 +18,15 @@ const App = () => {
                 <div>
                 {/* to continuously show the header it should be in the app component and not in a Route */}
                 <Header/>
+                {/* switch will only show one route */}
                     <Switch>
                         <Route path='/' exact component={StreamList}/>
                         <Route path='/streams/new' component={StreamCreate}/>
                         {/*the colon is the aspect that makes it so that id is a variable to allow for any id */}
                         <Route path='/streams/edit/:id' component={StreamEdit}/>
                         <Route path='/streams/delete/:id' component={StreamDelete}/>
-                        <Route path='/streams/show/:id' component={StreamShow}/>
+                        {/* switch prevents this from recognizing the new route and displaying both components */}
+                        <Route path='/streams/:id' component={StreamShow}/>
                     </Switch>
                 </div>
             </Router>
